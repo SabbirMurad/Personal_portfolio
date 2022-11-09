@@ -1,0 +1,60 @@
+.icon_holder{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0 15px;
+}
+.icon_holder .icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+.icon_blue{
+  color: rgb(59, 135, 250);
+}
+.icon_pink{
+  color: pink;
+}
+
+.icon_holder:hover .icon_blue{
+  animation: glitch_blue .5s infinite;
+}
+.icon_holder:hover .icon_pink{
+  animation: glitch_pink .5s infinite;
+}
+/* glitch sectio */
+@keyframes glitch_pink {
+  20%{
+    transform: translate(-50%,-65%);
+  }
+  40%{
+    transform: translate(-65%,-50%);
+  }
+  60%{
+    transform: translate(-35%,-50%);
+  }
+  80%{
+    transform: translate(-50%,-35%);
+  }
+  100%{
+    transform: translate(-50%,-50%);
+  }
+}
+@keyframes glitch_blue {
+  20%{
+    transform: translate(-65%,-50%);
+  }
+  40%{
+    transform: translate(-35%,-50%);
+  }
+  60%{
+    transform: translate(-50%,-35%);
+  }
+  80%{
+    transform: translate(-50%,-65%);
+  }
+  100%{
+    transform: translate(-50%,-50%);
+  }
+}
