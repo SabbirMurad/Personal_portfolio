@@ -44,12 +44,12 @@
 .item_background{
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
-  transition: all .2s ease-in-out;
+  transform: translateX(-100%);
+  transition: all .3s ease;
 }
 .item_text{
   height: 100%;
@@ -61,6 +61,7 @@
 }
 .nav_items .item:hover .item_background{
   transform: translateX(0%);
+  background-color: black;
 }
 .nav_items .item:hover .item_text{
   color: #fff;
@@ -77,6 +78,98 @@
 .nav_icons .icon_holder{
   font-size: 20px;
   padding: 5px;
-  margin: 0px 15px;
+  margin: 0px 10px;
   cursor: pointer;
+}
+@media screen and (max-width:480px) {
+  .nvber{
+    position: relative;
+  }
+  .nav_container{
+    justify-content: center;
+  }
+  .nav_items{
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100vh;
+    margin: 0;
+    width: 40vw;
+    justify-content: unset;
+    padding-top:55px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease;
+  }
+  .nav_hidden{
+    transform: translateX(-100%);
+  }
+  .nav_items .item{
+    margin: 0;
+    padding: 0;
+    height: unset;
+    width: 100%;
+    padding: 10px 30px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  .nav_icons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: unset;
+    margin: unset;
+    flex-direction: column;
+    margin: 0 15px;
+    margin-top: 70px;
+    background-color: black;
+    padding: 5px 2px;
+    border-radius: 25px;
+  }
+  .nav_icons .icon_holder{
+    margin: 5px 0;
+    padding: 10px 0px;
+    color: #fff;
+  }
+  .nav_menubar{
+    height: 55px;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav_menubar .bar{
+    height: 1px;
+    background-color: #000;
+    transition: all .3s ease;
+  }
+  .bar_1{
+    width: 100%;
+    margin: 5px 0;
+  }
+  .bar_1_active{
+    width: 30%;
+    rotate: -45deg;
+    margin-bottom: 4px;
+  }
+  .bar_2{
+    width: 75%;
+    margin: 5px 0;
+  }
+  .bar_2_active{
+    margin: unset;
+  }
+  .bar_3{
+    width: 50%;
+    margin: 5px 0;
+  }
+  .bar_3_active{
+    width: 30%;
+    rotate: 45deg;
+    margin-top: 4px;
+  }
 }
