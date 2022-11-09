@@ -1,8 +1,9 @@
 .navber{
   height: 55px;
   width: 100vw;
-  background-color: #fff;
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 10px var(--box-shadow);
+  font-weight: 500;
 }
 .nav_container{
   max-width: 85vw;
@@ -14,9 +15,11 @@
 }
 .logo{
   height: 30px;
+  color: var(--background-color);
 }
-.logo img{
+.logo svg{
   height: 100%;
+  fill: var(--text-color);
 }
 .nav_left{
   display: flex;
@@ -44,7 +47,7 @@
 .item_background{
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--background-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -56,20 +59,30 @@
   width: 100%;
   display: flex;
   align-items: center;
-  color: #000;
+  color: var(--text-color);
   z-index: 1;
+}
+.item_text .sub_arrow{
+  font-size: 14px;
+  padding: 0 2px;
+  color: var(--primary-color);
+  transition: all .3s ease;
+
 }
 .nav_items .item:hover .item_background{
   transform: translateX(0%);
-  background-color: black;
+  background-color: var(--text-color);
 }
 .nav_items .item:hover .item_text{
-  color: #fff;
+  color: var(--background-color);
+}
+.item:hover .item_text .sub_arrow{
+  rotate: 90deg;
 }
 .nav_icons{
   display: flex;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
   margin: 0px 10px;
   height: 80%;
   align-items: center;
@@ -80,6 +93,7 @@
   padding: 5px;
   margin: 0px 10px;
   cursor: pointer;
+  color: var(--text-color);
 }
 .nav_icon_option{
   display: none;
@@ -96,17 +110,18 @@
     top: 0;
     left: 0;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--background-blur);
     height: 100vh;
     margin: 0;
     width: 40vw;
     justify-content: unset;
     padding-top:55px;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0px 5px var(--box-shadow);
     transition: all .3s ease;
+    color: var(--text-color);
   }
   .nav_hidden{
-    transform: translateX(-100%);
+    transform: translateX(-110%);
   }
   .nav_items .item{
     margin: 0;
@@ -114,7 +129,7 @@
     height: unset;
     width: 100%;
     padding: 10px 30px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px var(--box-shadow);
   }
   .nav_icon_option{
     position: absolute;
@@ -122,10 +137,10 @@
     right: 0;
     margin: 0 15px;
     margin-top: 70px;
-    color: #fff;
+    color: var(--background-color);
     font-size: 20px;
     padding: 5px;
-    background-color: black;
+    background-color: var(--text-color);
     height: 30px;
     width: 30px;
     display:flex ;
@@ -135,7 +150,7 @@
   }
   .nav_icon_option .close{
     rotate: 45deg;
-    color: aqua;
+    color: var(--primary-color);
   }
   .nav_icons{
     position: absolute;
@@ -144,13 +159,13 @@
     flex-direction: column;
     margin: 0 15px;
     margin-top: 70px;
-    background-color: black;
+    background-color: var(--text-color);
     border-radius: 25px;
-    height: 0px;
+    height: 5px;
     overflow: hidden;
     padding: 0px 2px;
     padding-top: 32px;
-    transition: all .3s ease;
+    transition: all .5s ease-in-out;
   }
   .icon_active{
     height: 210px;
@@ -158,7 +173,7 @@
   .nav_icons .icon_holder{
     margin: 5px 0;
     padding: 10px 0px;
-    color: #fff;
+    color: var(--background-color);
   }
   .nav_menubar{
     height: 55px;
@@ -174,7 +189,7 @@
   }
   .nav_menubar .bar{
     height: 1px;
-    background-color: #000;
+    background-color: var(--text-color);
     transition: all .3s ease;
   }
   .bar_1{
