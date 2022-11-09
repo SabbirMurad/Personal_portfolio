@@ -81,6 +81,9 @@
   margin: 0px 10px;
   cursor: pointer;
 }
+.nav_icon_option{
+  display: none;
+}
 @media screen and (max-width:480px) {
   .nvber{
     position: relative;
@@ -113,18 +116,44 @@
     padding: 10px 30px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
   }
+  .nav_icon_option{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 15px;
+    margin-top: 70px;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .nav_icon_option .close{
+    rotate: 45deg;
+    color: aqua;
+  }
   .nav_icons{
     position: absolute;
     top: 0;
     right: 0;
-    height: unset;
-    margin: unset;
     flex-direction: column;
     margin: 0 15px;
     margin-top: 70px;
     background-color: black;
-    padding: 5px 2px;
     border-radius: 25px;
+    height: 0px;
+    overflow: hidden;
+    padding: 0px 2px;
+    padding-top: 32px;
+    transition: all .3s ease;
+  }
+  .icon_active{
+    height: 210px;
   }
   .nav_icons .icon_holder{
     margin: 5px 0;
@@ -141,6 +170,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
   .nav_menubar .bar{
     height: 1px;
@@ -155,6 +185,7 @@
     width: 30%;
     rotate: -45deg;
     margin-bottom: 4px;
+    transform: translateX(-1px);
   }
   .bar_2{
     width: 75%;
@@ -171,5 +202,6 @@
     width: 30%;
     rotate: 45deg;
     margin-top: 4px;
+    transform: translateX(-1px);
   }
 }
