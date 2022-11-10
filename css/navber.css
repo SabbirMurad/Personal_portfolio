@@ -64,8 +64,10 @@
 }
 .item_text .sub_arrow{
   font-size: 14px;
+  width: 18px;
   padding: 0 2px;
   color: var(--primary-color);
+  fill: var(--primary-color);
   transition: all .3s ease;
 
 }
@@ -94,6 +96,9 @@
   margin: 0px 10px;
   cursor: pointer;
   color: var(--text-color);
+}
+.icon_holder svg{
+  width: 20px;
 }
 .nav_icon_option{
   display: none;
