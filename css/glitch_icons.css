@@ -10,6 +10,9 @@
   left: 50%;
   transform: translate(-50% ,-50%);
 }
+.icon_front{
+  fill: var(--text-color);
+}
 .icon_blue{
   color: rgb(59, 174, 250);
   fill: rgb(59, 174, 250);
@@ -20,24 +23,25 @@
 }
 
 .icon_holder:hover .icon_blue{
-  animation: glitch_blue .5s infinite;
+  animation: glitch_blue .6s infinite;
 }
 .icon_holder:hover .icon_pink{
-  animation: glitch_pink .5s infinite;
+  animation: glitch_pink .6s infinite;
 }
+
 /* glitch sectio */
 @keyframes glitch_pink {
   20%{
-    transform: translate(-50%,-65%);
+    transform: translate(-50%,-62%);
   }
   40%{
-    transform: translate(-65%,-50%);
+    transform: translate(-62%,-50%);
   }
   60%{
-    transform: translate(-35%,-50%);
+    transform: translate(-38%,-50%);
   }
   80%{
-    transform: translate(-50%,-35%);
+    transform: translate(-50%,-38%);
   }
   100%{
     transform: translate(-50%,-50%);
@@ -45,18 +49,35 @@
 }
 @keyframes glitch_blue {
   20%{
-    transform: translate(-65%,-50%);
+    transform: translate(-62%,-50%);
   }
   40%{
-    transform: translate(-35%,-50%);
+    transform: translate(-38%,-50%);
   }
   60%{
-    transform: translate(-50%,-35%);
+    transform: translate(-50%,-38%);
   }
   80%{
-    transform: translate(-50%,-65%);
+    transform: translate(-50%,-62%);
   }
   100%{
     transform: translate(-50%,-50%);
+  }
+}
+@keyframes glitch_front {
+  20%{
+    fill: var(--background-color);
+  }
+  40%{
+    fill: var(--text-color);
+  }
+  60%{
+    fill: var(--background-color);
+  }
+  80%{
+    fill: var(--text-color);
+  }
+  100%{
+    fill: var(--background-color);
   }
 }

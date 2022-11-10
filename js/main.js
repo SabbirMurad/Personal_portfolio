@@ -1,8 +1,10 @@
+//toggling the menubar in mobile devicea
 let navMenuBar=document.querySelector('.nav_menubar');
 let navMenu=document.querySelector('.nav_items');
 let bar1=navMenuBar.querySelector('.bar_1');
 let bar2=navMenuBar.querySelector('.bar_2');
 let bar3=navMenuBar.querySelector('.bar_3');
+
 navMenuBar.addEventListener('click',()=>{
   navMenu.classList.toggle('nav_hidden');
   bar1.classList.toggle('bar_1_active');
@@ -10,9 +12,9 @@ navMenuBar.addEventListener('click',()=>{
   bar3.classList.toggle('bar_3_active');
 })
 
-
-
+//toggling the icons in mobile devices
 let iconOption =document.querySelector('.nav_icon_option');
+let ss=iconOption.querySelector('svg');
 let navIcons =document.querySelector('.nav_icons');
 let isIconActive=false;
 let closeIcon=`
@@ -21,7 +23,7 @@ let closeIcon=`
 let activeIcon=`
 <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
 `;
-iconOption.addEventListener('click',()=>{
+iconOption.addEventListener('click',(e)=>{
   navIcons.classList.toggle('icon_active');
   if(isIconActive){
     iconOption.innerHTML=closeIcon;
@@ -30,5 +32,15 @@ iconOption.addEventListener('click',()=>{
   else{
     iconOption.innerHTML=activeIcon;
     isIconActive=true;
+  }
+})
+
+//handeling icons and menubar when clicked somewhere else
+document.addEventListener('click',(e)=>{
+  if(e.target!=navMenu && (!navMenuBar.contains(e.target)) && (!navMenu.contains(e.target))){
+    navMenu.classList.add('nav_hidden');
+    bar1.classList.remove('bar_1_active');
+    bar2.classList.remove('bar_2_active');
+    bar3.classList.remove('bar_3_active');
   }
 })
