@@ -12,9 +12,11 @@
 }
 .icon_blue{
   color: rgb(59, 174, 250);
+  fill: rgb(59, 174, 250);
 }
 .icon_pink{
   color: pink;
+  fill: pink;
 }
 
 .icon_holder:hover .icon_blue{

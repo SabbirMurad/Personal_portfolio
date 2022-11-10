@@ -138,6 +138,7 @@
     margin: 0 15px;
     margin-top: 70px;
     color: var(--background-color);
+    fill: var(--background-color);
     font-size: 20px;
     padding: 5px;
     background-color: var(--text-color);
@@ -151,6 +152,7 @@
   .nav_icon_option .close{
     rotate: 45deg;
     color: var(--primary-color);
+    fill: var(--primary-color);
   }
   .nav_icons{
     position: absolute;
@@ -168,12 +170,15 @@
     transition: all .5s ease-in-out;
   }
   .icon_active{
-    height: 210px;
+    height: 250px;
   }
   .nav_icons .icon_holder{
     margin: 5px 0;
     padding: 10px 0px;
     color: var(--background-color);
+  }
+  .icon_holder .icon_front{
+    fill: var(--background-color);
   }
   .nav_menubar{
     height: 55px;
@@ -188,7 +193,7 @@
     overflow: hidden;
   }
   .nav_menubar .bar{
-    height: 1px;
+    height: 2px;
     background-color: var(--text-color);
     transition: all .3s ease;
   }
