@@ -43,4 +43,18 @@ document.addEventListener('click',(e)=>{
     bar2.classList.remove('bar_2_active');
     bar3.classList.remove('bar_3_active');
   }
+  if(isIconActive){
+    let isOpen=true;
+    for(let x of e.path){
+      if(x==iconOption){
+        isOpen=false;
+        break;
+      }
+    }
+    if(isOpen){
+      navIcons.classList.remove('icon_active');
+      iconOption.innerHTML=closeIcon;
+      isIconActive=false;
+    }
+  }
 })
