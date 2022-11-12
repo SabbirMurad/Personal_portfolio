@@ -5,7 +5,6 @@
   background-color: var(--background-color);
   box-shadow: 0px 1px 10px var(--box-shadow);
   font-weight: 500;
-  /* border-bottom: 1px solid black; */
 }
 .nav_container{
   max-width: 85vw;
@@ -29,6 +28,7 @@
   height: 100%;
   align-items: center;
 }
+/* ----------------------------------nav items */
 .nav_items{
   display: flex;
   height: 100%;
@@ -36,34 +36,24 @@
   justify-content: center;
   text-align: center;
   margin: 0 1.5em;
+  z-index: 1;
 }
 .item{
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 25px;
   font-size: .35em;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-}
-.item_background{
-  height: 100%;
-  width: 100%;
-  background-color: var(--background-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateX(-100%);
-  transition: all .3s ease;
 }
 .item_text{
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   color: var(--text-color);
   z-index: 1;
+  transition: all .3s ease;
+  padding: 0 1.5vw;
 }
 .item_text .sub_arrow{
   font-size: 14px;
@@ -72,7 +62,6 @@
   color: var(--primary-color);
   fill: var(--primary-color);
   transition: all .3s ease;
-
 }
 .nav_items .item:hover .item_background{
   transform: translateX(0%);
@@ -80,10 +69,45 @@
 }
 .nav_items .item:hover .item_text{
   color: var(--background-color);
+  background-color: var(--text-color);
 }
 .item:hover .item_text .sub_arrow{
   rotate: 90deg;
 }
+/* -----------------nav sub items */
+.sub_item_list{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: left;
+  overflow: hidden;
+  transition: all .5s ease;
+  box-shadow: 1px 0px 5px var(--box-shadow);
+  width: 120%;
+  pointer-events: none;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.sub_item_list .sub_items{
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--text-color);
+  transition: all .3s ease;
+}
+.sub_item_list .sub_items:last-child{
+  border: none;
+}
+.sub_item_list .sub_items:hover{
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+.item:hover .sub_item_list{
+  pointer-events: unset;
+  transform: translateY(0%);
+  opacity: 1;
+}
+/* -------------------icons------------ */
 .nav_icons{
   display: flex;
   border-left: 1px solid var(--text-color);
@@ -92,11 +116,10 @@
   height: 80%;
   align-items: center;
   padding: 0px .5em;
-  /* width: 30%; */
 }
 .nav_icons .icon_holder{
   font-size: 20px;
-  padding: 5px;
+  padding: 0 .5vw;
   margin: 0px 10px;
   cursor: pointer;
   color: var(--text-color);
@@ -108,6 +131,7 @@
 .nav_icon_option{
   display: none;
 }
+/* -------------------------mobile devices -------------- */
 @media screen and (max-width:480px) {
   .nvber{
     position: relative;
@@ -123,7 +147,7 @@
     background-color: var(--background-blur);
     height: 100vh;
     margin: 0;
-    width: 40vw;
+    width: 45vw;
     justify-content: unset;
     padding-top:55px;
     box-shadow: 1px 0px 5px var(--box-shadow);
@@ -138,9 +162,28 @@
     padding: 0;
     height: unset;
     width: 100%;
-    padding: 10px 30px;
     box-shadow: 0px 0px 3px var(--box-shadow);
   }
+  .item .item_text{
+    width: 100%;
+    padding: 10px;
+  }
+/* -------------------sub items */
+  .nav_items .item{
+    display: flex;
+    flex-direction: column;
+  }
+  .sub_item_list{
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  .item:hover .sub_item_list{
+  }
+  /* -------------------icons--------------- */
   .nav_icon_option{
     position: absolute;
     top: 0;
@@ -201,6 +244,7 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    z-index: 2;
   }
   .nav_menubar .bar{
     height: 2px;
