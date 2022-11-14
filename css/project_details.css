@@ -1,0 +1,8 @@
+.project_details_container{
+  width: 80vw;
+  height: 80vh;
+  /* background-color: rebeccapurple; */
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px var(--box-shadow);
+  margin-top: 8vh;
+}

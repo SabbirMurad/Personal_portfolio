@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/css/glitch_icons.css">
   <link rel="stylesheet" href="/css/showcase.css">
   <link rel="stylesheet" href="/css/projects.css">
+  <link rel="stylesheet" href="/css/project_details.css">
   <!-- title -->
   <link rel="icon" href="/imgs/logo.png">
   <title>Sabbir Hassan</title>
@@ -24,12 +25,12 @@
       <div class="nav_left">
         <!----------------------------------- nav items -->
         <div class="nav_items nav_hidden">
-          <div class="item">
+          <div class="item home">
             <div class="item_text">
               Home
             </div>
           </div>
-          <div class="item">
+          <div class="item project">
             <div class="item_text">
               Projects
               <svg class="sub_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"/></svg>
@@ -40,12 +41,12 @@
               <div class="sub_items">Apps</div>
             </div>
           </div>
-          <div class="item">
+          <div class="item revies">
             <div class="item_text">
               Reviews
             </div>
           </div>
-          <div class="item">
+          <div class="item hire">
             <div class="item_text">
               Hire
               <svg class="sub_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"/></svg>
@@ -98,22 +99,56 @@
   </div>
   <!--------------------------- showcase -->
   <div class="showcase">
-    <div class="showcase_container">
-      <div class="showcase_info">
-        <div class="header">
-          Sabbir Hassan
+    <div class="project_container">
+      <div class="project_heading">Projects</div>
+      <div class="options_selector">
+        <div class="option_item">Web pages</div>
+        <div class="option_devider"></div>
+        <div class="option_item">Browser Games</div>
+        <div class="option_devider"></div>
+        <div class="option_item">Apps</div>
+        <div class="option_devider"></div>
+      </div>
+      <div class="option_deselector">
+        <div class="option_deselector_item">
+          <div class="deselector_item_text">Web Pages</div>
+          <i class='bx bx-plus item_close'></i>
         </div>
-        <div class="header_underline"></div>
-        <div class="details">
-          Hi, I'm  Sabbir, an independent web designer and developer. This is my portfolio, you can find more about me here or learn about the projects I worked on
+        <div class="option_deselector_item">
+          <div class="deselector_item_text">Web Pages</div>
+          <i class='bx bx-plus item_close'></i>
         </div>
-        <div class="more_btn">
-          <div class="btn_background"></div>
-          <div class="btn_front">More</div>
+      </div>
+      <div class="project_items">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="page_changer">
+        <div class="page_pre page">
+          1
+        </div>
+        <div class="left_arrow arrow">
+          <i class='bx bx-chevron-left'></i>
+        </div>
+        <div class="page_current page">
+          2
+        </div>
+        <div class="right_arrow arrow">
+          <i class='bx bx-chevron-right'></i>
+        </div>
+        <div class="page_next page">
+          3
         </div>
       </div>
     </div>
   </div>
+  <script src="/js/autoComplete.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

@@ -60,3 +60,15 @@ document.addEventListener('click',(e)=>{
     }
   }
 })
+
+// switching pages on click
+
+let homeBtn= navMenu.querySelector('.home');
+let projectBtn = navMenu.querySelector('.project');
+
+homeBtn.addEventListener('click',()=>{
+  showcase.innerHTML=homeFetch;
+})
+projectBtn.addEventListener('click',()=>{
+  showcase.innerHTML=projectFetch;
+})

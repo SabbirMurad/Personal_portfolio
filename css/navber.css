@@ -82,7 +82,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--background-color);
+  background: var(--gradient-background);
   color: var(--text-color);
   text-align: left;
   overflow: hidden;
@@ -134,8 +134,62 @@
 .nav_icon_option{
   display: none;
 }
-/* -------------------------mobile devices -------------- */
+/* -------------------------tablet devices -------------- */
+@media screen and (max-width:1024px) {
+  /* -------------------------------icons */
+  .nav_icon_option{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 15px;
+    margin-top: 70px;
+    color: var(--background-color);
+    fill: var(--background-color);
+    font-size: 20px;
+    padding: 5px;
+    background-color: var(--text-color);
+    height: 30px;
+    width: 30px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .nav_icon_option .close{
+    rotate: 45deg;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+  }
+  .nav_icons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 0 15px;
+    margin-top: 70px;
+    background-color: var(--text-color);
+    border-radius: 25px;
+    height: 5px;
+    overflow: hidden;
+    padding: 0px 2px;
+    padding-top: 32px;
+    transition: all .5s ease-in-out;
+  }
+  .icon_active{
+    height: 250px;
+  }
+  .nav_icons .icon_holder{
+    margin: 5px 0;
+    padding: 10px 0px;
+    color: var(--background-color);
+  }
+  .icon_holder .icon_front{
+    fill: var(--background-color);
+  }
+}
+/* --------------------------------mobile devices */
 @media screen and (max-width:480px) {
+  /* -----------------------------nav items */
   .nvber{
     position: relative;
   }
@@ -186,56 +240,7 @@
   }
   .item:hover .sub_item_list{
   }
-  /* -------------------icons--------------- */
-  .nav_icon_option{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0 15px;
-    margin-top: 70px;
-    color: var(--background-color);
-    fill: var(--background-color);
-    font-size: 20px;
-    padding: 5px;
-    background-color: var(--text-color);
-    height: 30px;
-    width: 30px;
-    display:flex ;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  .nav_icon_option .close{
-    rotate: 45deg;
-    color: var(--primary-color);
-    fill: var(--primary-color);
-  }
-  .nav_icons{
-    position: absolute;
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    margin: 0 15px;
-    margin-top: 70px;
-    background-color: var(--text-color);
-    border-radius: 25px;
-    height: 5px;
-    overflow: hidden;
-    padding: 0px 2px;
-    padding-top: 32px;
-    transition: all .5s ease-in-out;
-  }
-  .icon_active{
-    height: 250px;
-  }
-  .nav_icons .icon_holder{
-    margin: 5px 0;
-    padding: 10px 0px;
-    color: var(--background-color);
-  }
-  .icon_holder .icon_front{
-    fill: var(--background-color);
-  }
+  /* -------------------menubar--------------- */
   .nav_menubar{
     height: 6vh;
     width: 45px;
