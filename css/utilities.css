@@ -7,14 +7,13 @@
 }
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
   --text-color:#222;
-  --background-color:#fff;
-  --primary-color:#7a72f5;
-  --background-blur:rgba(255,255,255,0.8);
-  --box-shadow:rgba(34,34,34,0.3);
-
-  background-color: var(--background-color);
+  --background-color:rgb(240, 240, 240);
+  --primary-color:#7dc5f8;
+  --background-blur:rgba(255,255,255,.7);
+  --box-shadow:rgba(34,34,34,0.2);
+  --gradient-background:linear-gradient(275deg,#E5F3FD,#f3eef6);
+  background: var(--gradient-background);
 }
 .dark_theme{
   --text-color:#fff;
