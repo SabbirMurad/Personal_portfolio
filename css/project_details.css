@@ -5,4 +5,39 @@
   border-radius: 10px;
   box-shadow: 0px 1px 5px var(--box-shadow);
   margin-top: 8vh;
+  display: flex;
+  padding: 10vh 5vw;
+}
+.project_details_container .left{
+  /* width: 50%; */
+  margin-right: 5vw;
+}
+.project_details_container .left .thumbnail{
+  width: 25vw;
+  height: 30vh;
+  background-color: rebeccapurple;
+}
+.project_details_container .right{
+  /* width: 50%; */
+}
+.project_details_container .right .info_header{
+  font-size: 36px;
+  margin: 10px 0;
+}
+.right .info_description{
+  line-height: 1.5em;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #444;
+}
+.right .source_code_link{
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.source_code_link .text{
+  display: flex;
+}
+.source_code_link .icon{
+  display: flex;
 }
