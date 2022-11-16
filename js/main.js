@@ -71,4 +71,17 @@ homeBtn.addEventListener('click',()=>{
 })
 projectBtn.addEventListener('click',()=>{
   showcase.innerHTML=projectFetch;
+  let items = document.querySelector('.project_items');
+
+  for(let i=0;i<5;i++){
+    let item =document.createElement('div');
+    item.classList.add('item');
+    item.innerHTML=`
+    <img class="item_bg" src="/imgs/Screenshot 2022-11-16 130835.png" alt="">
+    <div class="item_title">
+      Roll Dice
+    </div>
+    `
+    items.appendChild(item);
+  }
 })
