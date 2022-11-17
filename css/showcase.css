@@ -78,6 +78,11 @@
 .more_btn:hover .btn_front{
   color: var(--text-color);
 }
+@media screen and (max-width:1024px) {
+  .showcase_container{
+    width: 90vw;
+  }
+}
 @media screen and (max-width:480px) {
   .showcase_container{
     width: 90vw;

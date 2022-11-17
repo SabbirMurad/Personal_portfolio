@@ -58,7 +58,9 @@
   width: 35%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
   padding: 0 1vw;
 }
 
@@ -86,4 +88,37 @@
 .source_code_link .icon{
   display: flex;
   margin-left: 10px;
+}
+
+@media screen and (max-width:1024px) {
+  .project_details_container{
+    flex-direction: column;
+    height: unset;
+  }
+  .project_details_container .left{
+    width: 100%;
+    height: 50vh;
+    padding: 10px 5px;
+  }
+  .project_details_container .left .image_container{
+    height: 100%;
+  }
+  .project_details_container .right{
+    width: 100%;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 15px ;
+  }
+  .right .source_code_link{
+    margin: 10px 0;
+  }
+  .navigator div{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:480px){
+  .project_details_container .left{
+    height: 25vh;
+  }
 }
