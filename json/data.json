@@ -3,6 +3,7 @@
     "01":{
       "id":"01",
       "tile":"Roll Dice",
+      "img-count":4,
       "images":{
         "01":"",
         "02":"",

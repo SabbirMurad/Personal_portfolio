@@ -17,9 +17,12 @@
 }
 .project_details_container .left .image_container{
   width: 100%;
-  height: 80%;
+  height: 75%;
   background-color: yellowgreen;
+  border-radius: 5px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 5px var(--box-shadow);
 }
 .image_container .navigator{
   width: 100%;
@@ -46,12 +49,13 @@
   width: 100%;
   position: relative;
   display: flex;
-  overflow: hidden;
   object-fit: cover;
+  transition: transform .5s ease;
 }
 .image_container .images .image{
   min-width: 100%;
   height: 100%;
+  font-size: 40px;
 }
 /* ----------------info side */
 .project_details_container .right{
@@ -94,6 +98,7 @@
   .project_details_container{
     flex-direction: column;
     height: unset;
+    width: 90vw;
   }
   .project_details_container .left{
     width: 100%;

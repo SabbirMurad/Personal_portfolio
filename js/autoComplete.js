@@ -60,12 +60,23 @@ let projectFetch=`
 let projectDetailsFetch=`
 <div class="project_details_container">
       <div class="left">
-        <div class="thumbnail">
-
+        <div class="image_container">
+          <div class="navigator">
+            <div class="previous">
+              <i class='bx bxs-chevron-left' ></i>
+            </div>
+            <div class="next">
+              <i class='bx bxs-chevron-right'></i>
+            </div>
+          </div>
+          <div class="images">
+            <div class="image">s</div>
+            <div class="image">a</div>
+            <div class="image">b</div>
+          </div>
         </div>
       </div>
       <div class="right">
-        <div class="info">
           <div class="info_header">
             Project Title
           </div>
@@ -80,7 +91,14 @@ let projectDetailsFetch=`
               <i class="bx bxl-github"></i>
             </a>
           </div>
-        </div>
+          <div class="source_code_link">
+            <div class="text">
+              CodePen Link : 
+            </div>
+            <a href="#" target="_blank" class="icon">
+              <i class="bx bxl-github"></i>
+            </a>
+          </div>
       </div>
     </div>
 `

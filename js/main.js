@@ -79,3 +79,23 @@ projectBtn.addEventListener('click',()=>{
     items.appendChild(item);
   }
 })
+
+//changing image on click
+let totalImg=3;
+let currentImg=0;
+let imgContainer=document.querySelector('.image_container');
+let nextBtn=imgContainer.querySelector('.next');
+let preBtn=imgContainer.querySelector('.previous');
+let images=imgContainer.querySelector('.images');
+nextBtn.addEventListener('click',()=>{
+  if(currentImg!=(totalImg-1)){
+    currentImg++;
+    images.style.transform=`translateX(${currentImg*-100}%)`
+  }
+})
+preBtn.addEventListener('click',()=>{
+  if(currentImg!=0){
+    currentImg--;
+    images.style.transform=`translateX(${currentImg*-100}%)`
+  }
+})
